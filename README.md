@@ -2,22 +2,33 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Feature Description
+
+There is two parts, Quick Staitics and Task List, mobile version is also available 
+### Quick Staitics
+
+1. This's actually a filter, you can select "All Tasks", "To Do Tasks", "Urgent Task", "Completed Tasks".
+2. Click one, boarder will appear, task list will be filtered.
+3. Click second time, boarder will disappear, will show all tasks.
+
+### Task List
+
+1. On filter area, you can click cross icon to add task, there will be a popup.
+2. You can sort by priority and status.
+3. Search Task subject.
+4. On List, there are 2 icons, one is edit, other is delete, when click, popup will be showed. 
 ## Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
 
+Before run app, "npm i" to install dependences.
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 

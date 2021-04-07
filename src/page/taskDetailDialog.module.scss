@@ -1,0 +1,17 @@
+.dialog {
+    width: 300px;
+    .header {
+        padding: 5px 0 20px 0;
+        color: var(--primary-color);
+        font-weight: 600;
+        font-size: 17px;
+    }
+    .status {
+        margin-top: 10px;
+    }
+    .error {
+        font-size: 15px;
+        padding: 10px 0;
+        color: var(--urgent-color);
+    }
+}

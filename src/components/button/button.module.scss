@@ -1,0 +1,96 @@
+@import "../../index.scss";
+
+.solid {
+    color: white;
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    text-align: center;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    &:focus {
+        box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0,0,0,.12);
+    }
+    &:active {
+        box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0,0,0,.12);
+    }
+    &:hover {
+        color: white;
+        background: var(--secondary-color);
+        border: 1px solid var(--secondary-color);
+        filter: brightness(110%);
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0,0,0,.12);
+        transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition-property: box-shadow;
+        transition-duration: 280ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 0s
+    }
+    &.disabled{
+        border-color: #8E8E8E;
+        background-color: #CCCCCC;
+        color: #8E8E8E;
+        cursor: not-allowed;
+
+        &:hover {
+            border-color: #8E8E8E;
+            background-color: #CCCCCC;
+            color: #8E8E8E;
+        }
+        &:focus {
+            border-color: #8E8E8E;
+            background-color: #CCCCCC;
+            color: #8E8E8E;
+        }
+    }
+}
+
+.hollow{
+    color: var(--secondary-color);
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    text-align: center;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+  
+    &:focus {
+        box-shadow: 0px 2px 4px -1px rgba(190, 190, 190, 0.2), 0px 4px 5px 0px rgba(190, 190, 190, 0.2), 0px 1px 10px 0px rgba(190, 190, 190, 0.2);
+    }
+    &:active {
+        box-shadow: 0px 5px 5px -3px rgba(190, 190, 190, 0.2), 0px 8px 10px 1px rgba(190, 190, 190, 0.2), 0px 3px 14px 2px rgba(190, 190, 190, 0.2);
+    }
+    &:hover {
+        color: var(--secondary-color);
+        background: transparent;
+        border: 1px solid var(--secondary-color);
+        filter: brightness(80%);
+        box-shadow: 0px 3px 1px -2px rgba(190, 190, 190, 0.2), 0px 2px 2px 0px rgba(190, 190, 190, 0.2), 0px 1px 5px 0px rgba(190, 190, 190, 0.2);
+        transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition-property: box-shadow;
+        transition-duration: 280ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-delay: 0s
+    }
+    &.disabled{
+        border-color: #8E8E8E;
+        background-color: #CCCCCC;
+        color: #8E8E8E;
+        cursor: not-allowed;
+
+        &:hover {
+            border-color: #8E8E8E;
+            background-color: #CCCCCC;
+            color: #8E8E8E;
+        }
+        &:focus {
+            border-color: #8E8E8E;
+            background-color: #CCCCCC;
+            color: #8E8E8E;
+        }
+    }
+}  

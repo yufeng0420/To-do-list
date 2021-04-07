@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+
+:root {
+  --primary-color: #364260;
+  --secondary-color: #5D84FB;
+  --green-color: #3AEBB6;
+  --yellow-color: #FFC700;
+  --urgent-color: #E20A0A;
+}
+
+.h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color)
+}
+.h2 {
+  font-size: 1.15rem;
+  color: var(--primary-color)
+}
+.h3 {
+  font-size: 0.85rem;
+  color: var(--primary-color)
+}
+
+@mixin larger-than-laptop {
+  @media (min-width: 1024px){ @content; }
+}
+
+@mixin only-on-mobile {
+  @media (max-width: 427px){ @content; }
+}
+
+@mixin small-mobile {
+  @media (max-width: 321px){ @content; }
+}

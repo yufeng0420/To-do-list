@@ -1,0 +1,45 @@
+@import "../index.scss";
+
+.box {
+    padding: 20px 0;
+    .headerBox {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        .sortBox {
+            display: flex;
+            .addList {
+                background-color: var(--green-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                cursor: pointer;
+                margin-left: 20px;
+            }
+            .sort {
+                display: flex;
+                align-items: center;
+                color: var(--primary-color);
+            }
+        }
+    }
+    .cardBox {
+        width: 100%;
+    }
+    
+}
+
+.removeDialog {
+    width: 280px;
+    .header {
+        padding: 5px 0 20px 0;
+        color: var(--primary-color);
+        font-weight: 500;
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,48 @@
+@import "../../index.scss";
+
+.textarea {
+    border: 1px solid #D9DAE8;
+    border-radius: 7px;
+    height: 120px;
+    color: #36435F !important;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    textarea {
+        padding: 9px 10px;
+        height: 100px;
+        outline:none;
+        border: none;
+        &:focus{
+            outline:none
+        }
+        overflow: hidden;
+        resize: none;
+        background-color: unset;
+        font-size: 13px;
+        opacity: unset;
+        color: var(--primary-color);
+        &:disabled {
+            font-size: 13px;
+            opacity: unset;
+            background-color: unset;
+            color: var(--primary-color);
+        }
+        &::placeholder {
+            font-weight: 300;
+            font-size: 13px;
+            color: #868E9F;
+        }
+    }
+    .number {
+        align-self: flex-end;
+        padding: 5px;
+    }
+}
+
+.warning {
+    border: 1px solid var(--urgent-color);
+    .numberWarning {
+        color: var(--urgent-color)
+    }
+}

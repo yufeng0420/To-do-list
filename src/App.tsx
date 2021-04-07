@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment, useEffect} from 'react';
+import { useDispatch } from "react-redux";
+import Desktop from "./page/desktop/desktop"
+import Mobile from "./page/mobile/mobile"
+import { getTasks } from "./reducer"
+import { useWindowWidth } from "./kit/useScreenWidth"
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const dispatch = useDispatch();
+    const screenWidth = useWindowWidth();
+
+    useEffect(()=>{
+        dispatch(getTasks())
+    },[])
+
+    return (
+        <Fragment>
+            {screenWidth < 769 ?
+                <Mobile /> :
+                <Desktop />
+            }
+        </Fragment>
+    );
 }
 
 export default App;

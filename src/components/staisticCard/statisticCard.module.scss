@@ -1,0 +1,28 @@
+@import "../../index.scss";
+
+.box {
+    width: 230px;
+    height: 70px;
+    background: #ffffff;
+    box-shadow: 2px 2px 2px rgba(227, 229, 233, 0.6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin: 0px 10px;
+    @include only-on-mobile {
+        width: 120px;
+        margin: 0px 5px 10px 0px;
+    }
+    @include small-mobile {
+        margin: 0px 5px;
+        width: 80px;
+        margin-bottom: 10px;
+    }
+}
+
+.showBoarder {
+    border: 2px solid var(--secondary-color) !important;
+}

@@ -1,0 +1,46 @@
+.Select {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 65px;
+    padding: 5px;
+    cursor: pointer;
+
+    .arrowContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .arrow {
+            display: flex;
+            justify-content: center;
+            width: 20px;
+            margin-right: 15px;
+        }
+    }
+
+    .dropDownMenu {
+        width: 100%;
+        overflow-y: auto;
+        max-height: 300px;
+        position: absolute;
+        z-index: 1;
+        background-color: white;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 2px 1px -1px rgba(0, 0, 0, 0.12);
+        align-self: flex-start;
+        top: 100%;
+        right: 0;
+    }
+  
+
+    .dropDownItems {
+        padding: 13px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #e0e0e0;
+        }
+    }
+}
