@@ -64,7 +64,7 @@ export default function QuickStaistics({tasks, setTasks}: QuickStaisticsType){
             {taskList?.map((m, index)=> {
                 let showBoarder = m.title === selectTask.title
                 return  <StaisticsCard 
-                        keyId = {index.toString()}
+                        key = {index.toString()+"Task"}
                         value = {m}
                         onChange = {(e, tasks)=>changeValue(e, tasks)}
                         showBoarder = {showBoarder}
