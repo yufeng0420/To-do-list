@@ -89,6 +89,7 @@ export default function TaskList({ tasks }: TaskListtype){
         <div className = {styles.cardBox}>
             {filteredTasks.map((data, index)=>
                 <TaskCard 
+                    key = {index.toString()+"Task"}
                     task = {data}
                     clickEdit={(task)=>{
                         setShowTaskDialog(true)

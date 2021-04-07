@@ -28,16 +28,15 @@ export default function TaskList({ tasks }: TaskListtype){
     const [subject, setSubject] = useState("")
     const [task, setTask] = useState<Task>(initTask) // set this task to edit or remove
     const copyTasks = tasks.slice() // get one tasks copy
+    const filterTasks = copyTasks.filter((c)=> c.subject.toLocaleLowerCase().includes(subject.toLowerCase()))
 
     useEffect(()=>{
         setFilteredTasks(tasks)
     },[tasks])
 
     useEffect(()=>{
-        const filterTasks = copyTasks.filter((c)=> c.subject.toLocaleLowerCase().includes(subject.toLowerCase()))
         setFilteredTasks(filterTasks)
     },[subject])
-
 
     // Delete one task and close dialog
     function removeTask(){

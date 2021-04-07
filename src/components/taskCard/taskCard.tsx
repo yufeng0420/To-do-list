@@ -11,10 +11,11 @@ type TaskCardType = {
     className?: string,
     task: Task,
     clickEdit:(e:Task)=> any,
-    clickRemove:(e:Task)=> any
+    clickRemove:(e:Task)=> any,
+    key: string
 }
 
-export default function TaskCard({className, task, clickEdit, clickRemove}: TaskCardType){
+export default function TaskCard({className, task, clickEdit, clickRemove, key}: TaskCardType){
 
     // different priority, different colour
     function getDotcolor(){
@@ -27,7 +28,7 @@ export default function TaskCard({className, task, clickEdit, clickRemove}: Task
         }
     }
 
-    return <div className = {classNames(styles.box, className)}>
+    return <div className = {classNames(styles.box, className)} key = {key}>
         <div className = {styles.name}>{task?.subject}</div>
         <div className = {styles.status}>
             <div className = {task.status !== "Complete" ? styles.statusBox : styles.complete}>

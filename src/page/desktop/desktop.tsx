@@ -10,6 +10,7 @@ export default function Desktop(){
 
     const tasks = useTypedSelector(state => state.tasks)
 
+    // set task for filter 
     const [showTasks, setShowTasks] = useState<Task[]>([])
 
     useEffect(()=>{

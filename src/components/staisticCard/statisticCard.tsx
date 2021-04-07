@@ -10,10 +10,11 @@ type staisticsCardType = {
     value: TaskList,
     onChange: (s: TaskList, tasks: Task[])=>any,
     showBoarder: boolean,
-    tasks: Task[]
+    tasks: Task[],
+    keyId: string
 }
 
-export default function StaisticsCard({value, onChange, className, showBoarder, tasks}: staisticsCardType){
+export default function StaisticsCard({value, onChange, className, showBoarder, tasks, keyId}: staisticsCardType){
 
     const [removeBoarder, setRomoveBoarder]=useState(false) // for the feature, when click twice, border will disppear, filter will disppear
 
@@ -25,6 +26,7 @@ export default function StaisticsCard({value, onChange, className, showBoarder, 
     },[showBoarder])
 
     return <div className = {classNames(styles.box, {[styles.showBoarder]: showBoarder && removeBoarder},className)} 
+        key ={keyId}
         onClick ={()=>{
             if(!removeBoarder){ // first click, show boarder, show filtered tasks  
                 onChange(value, value.tasks)

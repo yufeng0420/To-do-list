@@ -11,7 +11,7 @@ function App() {
     const dispatch = useDispatch();
     const screenWidth = useWindowWidth();
 
-    useEffect(()=>{
+    useEffect(()=>{        
         dispatch(getTasks())
     },[])
 

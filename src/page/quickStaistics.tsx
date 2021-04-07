@@ -61,9 +61,10 @@ export default function QuickStaistics({tasks, setTasks}: QuickStaisticsType){
             Quick Staistics
         </div>
         <div className = {styles.cardBox}>
-            {taskList.map((m, index)=> {
+            {taskList?.map((m, index)=> {
                 let showBoarder = m.title === selectTask.title
                 return  <StaisticsCard 
+                        keyId = {index.toString()}
                         value = {m}
                         onChange = {(e, tasks)=>changeValue(e, tasks)}
                         showBoarder = {showBoarder}
